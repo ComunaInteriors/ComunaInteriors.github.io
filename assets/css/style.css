@@ -371,7 +371,7 @@ h6 {
 #hero {
   width: 100%;
   height: calc(100vh - 70px);
-  background: url("../img/hero-bg.jpg") center center;
+  background: url("../img/DSC02593.png") center center;
   background-size: cover;
   position: relative;
   margin-top: 70px;
@@ -977,6 +977,39 @@ section {
   right: 15px;
 }
 
+
+/* Clients Section - Home Page
+------------------------------*/
+.clients {
+  padding: 10px 0;
+}
+
+.clients .client-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.clients .client-logo img {
+  padding: 40px;
+  max-width: 100%;
+  transition: 0.3s;
+  opacity: 0.5;
+  filter: grayscale(100);
+}
+
+.clients .client-logo img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .clients .client-logo img {
+    padding: 20px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -985,12 +1018,16 @@ section {
 }
 
 .portfolio-details .portfolio-details-slider img {
-  width: 100%;
+  width: 70%;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
@@ -1065,7 +1102,7 @@ section {
 
 .team .member .member-info-content {
   position: absolute;
-  left: 50px;
+  left: 0;
   right: 0;
   bottom: 0;
   transition: bottom 0.4s;
