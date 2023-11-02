@@ -33,6 +33,18 @@
     }
   }
 
+
+  var elements = document.getElementsByClassName("read-more-button");
+  console.log(elements.length);
+  for (var i=0; i<elements.length; i++) {
+      elements[i].addEventListener('click',(e)=>{
+        console.log(e.target.id)
+        document.getElementById("read-more"+ e.target.id).classList.toggle('read-more');
+      })
+  }
+  // const readMoreBtn = document.querySelector('.read-more-button');
+
+
   /**
    * Easy on scroll event listener 
    */
@@ -145,25 +157,14 @@
     speed: 600,
     loop: true,
     autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
+      delay: 8000,
+      disableOnInteraction: true
     },
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
     }
   });
 
